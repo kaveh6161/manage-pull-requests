@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3.5
     
-    - uses: actions/setup-python@v1
+    - uses: actions/setup-python@v3.1
       with:
         python-version: 3.8
     
@@ -30,12 +30,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3.5
     
-    - uses: hmarr/auto-approve-action@v2.0.0
+    - uses: hmarr/auto-approve-action@v3.2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     
-    - uses: managedkaos/merge-pull-request@v1.2
+    - uses: managedkaos/merge-pull-request@v2.2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
